@@ -1,0 +1,21 @@
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\bin\Debug\Drone Calculations.exe.config
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\bin\Debug\Drone Calculations.exe
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\bin\Debug\Drone Calculations.pdb
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone Flight Time Calculator.csprojAssemblyReference.cache
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone_Flight_Time_Calculator.Drone_Flight_Time_Calculator.resources
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone_Calculations.Drone_Calculations.resources
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone_Calculations.Properties.Resources.resources
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone Flight Time Calculator.csproj.GenerateResource.cache
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone Flight Time Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone Calculations.exe
+C:\Users\Saloni Agrawal\source\repos\Drone Calculations\obj\Debug\Drone Calculations.pdb
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\bin\Debug\Drone Calculations.exe.config
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\bin\Debug\Drone Calculations.exe
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\bin\Debug\Drone Calculations.pdb
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone Flight Time Calculator.csprojAssemblyReference.cache
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone_Flight_Time_Calculator.Drone_Flight_Time_Calculator.resources
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone_Calculations.Drone_Calculations.resources
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone_Calculations.Properties.Resources.resources
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone Flight Time Calculator.csproj.GenerateResource.cache
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone Calculations.exe
+C:\Users\Saloni Agrawal\source\repos\Drone Flight Time Calculator\obj\Debug\Drone Calculations.pdb
