@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Drone_Calculations
+namespace Drone_Flight_Time_Calculator
 {
-    public partial class Drone_Calculations : Form
+    public partial class Form1 : Form
     {
-        public Drone_Calculations()
+        public Form1()
         {
             InitializeComponent();
         }
+
     }
 }

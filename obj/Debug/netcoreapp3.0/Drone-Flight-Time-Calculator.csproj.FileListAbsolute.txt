@@ -1,0 +1,11 @@
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\bin\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.exe
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\bin\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.deps.json
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\bin\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.runtimeconfig.json
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\bin\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.runtimeconfig.dev.json
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\bin\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.dll
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\bin\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.pdb
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\obj\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.csprojAssemblyReference.cache
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\obj\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.AssemblyInfoInputs.cache
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\obj\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.AssemblyInfo.cs
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\obj\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.dll
+D:\Harsh\Google Drive\Projects\Drone-Flight-Time-Calculator\obj\Debug\netcoreapp3.0\Drone-Flight-Time-Calculator.pdb

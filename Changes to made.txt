@@ -1,5 +1,0 @@
-[02-11-2019]
-1. Change unit weight and total weight to decimal
-2. Total weight should be updated live
-
- 
