@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Drone_Flight_Time_Calculator
+namespace Drone_Calculations
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Drone_Flight_Time_Calculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Drone_Flight_Time_Calculator());
+            Application.Run(new FirstPage());
         }
     }
 }

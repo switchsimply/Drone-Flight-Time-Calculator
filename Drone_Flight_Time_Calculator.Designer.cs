@@ -33,9 +33,11 @@
             this.gbParts_Details = new System.Windows.Forms.GroupBox();
             this.dgvParts_Details = new System.Windows.Forms.DataGridView();
             this.tblPart_Details = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCalculatedWeight = new System.Windows.Forms.Label();
             this.lblDroneType = new System.Windows.Forms.Label();
             this.cmbDroneType = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblTotalWeight = new System.Windows.Forms.Label();
             this.gbParts_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParts_Details)).BeginInit();
             this.tblPart_Details.SuspendLayout();
@@ -86,24 +88,42 @@
             this.dgvParts_Details.RowTemplate.Height = 24;
             this.dgvParts_Details.Size = new System.Drawing.Size(901, 395);
             this.dgvParts_Details.TabIndex = 2;
+            this.dgvParts_Details.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParts_Details_CellEndEdit);
             // 
             // tblPart_Details
             // 
-            this.tblPart_Details.ColumnCount = 3;
+            this.tblPart_Details.ColumnCount = 5;
             this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.4596F));
-            this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.16942F));
-            this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.37098F));
+            this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.73918F));
+            this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.84018F));
+            this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tblPart_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tblPart_Details.Controls.Add(this.lblCalculatedWeight, 4, 0);
             this.tblPart_Details.Controls.Add(this.lblDroneType, 0, 0);
             this.tblPart_Details.Controls.Add(this.cmbDroneType, 1, 0);
             this.tblPart_Details.Controls.Add(this.btnUpdate, 2, 0);
+            this.tblPart_Details.Controls.Add(this.lblTotalWeight, 3, 0);
             this.tblPart_Details.Dock = System.Windows.Forms.DockStyle.Top;
             this.tblPart_Details.Location = new System.Drawing.Point(3, 19);
             this.tblPart_Details.Name = "tblPart_Details";
             this.tblPart_Details.RowCount = 1;
             this.tblPart_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPart_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tblPart_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tblPart_Details.Size = new System.Drawing.Size(901, 71);
             this.tblPart_Details.TabIndex = 1;
+            // 
+            // lblCalculatedWeight
+            // 
+            this.lblCalculatedWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCalculatedWeight.AutoSize = true;
+            this.lblCalculatedWeight.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalculatedWeight.Location = new System.Drawing.Point(753, 25);
+            this.lblCalculatedWeight.Name = "lblCalculatedWeight";
+            this.lblCalculatedWeight.Size = new System.Drawing.Size(145, 20);
+            this.lblCalculatedWeight.TabIndex = 9;
+            this.lblCalculatedWeight.Text = "Total Weight";
+            this.lblCalculatedWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCalculatedWeight.Visible = false;
             // 
             // lblDroneType
             // 
@@ -112,7 +132,7 @@
             this.lblDroneType.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDroneType.Location = new System.Drawing.Point(3, 25);
             this.lblDroneType.Name = "lblDroneType";
-            this.lblDroneType.Size = new System.Drawing.Size(187, 20);
+            this.lblDroneType.Size = new System.Drawing.Size(117, 20);
             this.lblDroneType.TabIndex = 1;
             this.lblDroneType.Text = "Drone Type";
             this.lblDroneType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,9 +142,9 @@
             this.cmbDroneType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmbDroneType.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDroneType.FormattingEnabled = true;
-            this.cmbDroneType.Location = new System.Drawing.Point(196, 24);
+            this.cmbDroneType.Location = new System.Drawing.Point(126, 22);
             this.cmbDroneType.Name = "cmbDroneType";
-            this.cmbDroneType.Size = new System.Drawing.Size(263, 26);
+            this.cmbDroneType.Size = new System.Drawing.Size(194, 26);
             this.cmbDroneType.TabIndex = 0;
             this.cmbDroneType.SelectedIndexChanged += new System.EventHandler(this.CmbDroneType_SelectedIndexChanged);
             // 
@@ -134,13 +154,26 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Teal;
             this.btnUpdate.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdate.Location = new System.Drawing.Point(693, 17);
+            this.btnUpdate.Location = new System.Drawing.Point(326, 17);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 37);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
+            // lblTotalWeight
+            // 
+            this.lblTotalWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalWeight.AutoSize = true;
+            this.lblTotalWeight.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalWeight.Location = new System.Drawing.Point(579, 25);
+            this.lblTotalWeight.Name = "lblTotalWeight";
+            this.lblTotalWeight.Size = new System.Drawing.Size(168, 20);
+            this.lblTotalWeight.TabIndex = 8;
+            this.lblTotalWeight.Text = "Total Weight";
+            this.lblTotalWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotalWeight.Visible = false;
             // 
             // Drone_Flight_Time_Calculator
             // 
@@ -175,5 +208,7 @@
         private System.Windows.Forms.DataGridView dgvParts_Details;
         private System.Windows.Forms.Label lblDroneType;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblTotalWeight;
+        private System.Windows.Forms.Label lblCalculatedWeight;
     }
 }

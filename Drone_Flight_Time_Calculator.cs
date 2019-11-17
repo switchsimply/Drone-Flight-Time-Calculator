@@ -28,6 +28,7 @@ namespace Drone_Flight_Time_Calculator
             this.dgvParts_Details.RowsDefaultCellStyle.BackColor = Color.White;
             this.dgvParts_Details.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
             this.dgvParts_Details.AllowUserToAddRows = true;
+            this.dgvParts_Details.Columns[5].ReadOnly = true;
             //this.dgvParts_Details.EditMode = DataGridViewEditMode.EditOnKeystroke;
         }
         private void PopulateCmbDroneType()
@@ -149,5 +150,55 @@ namespace Drone_Flight_Time_Calculator
             }
         }
 
+        private void dgvParts_Details_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                UseWaitCursor = true;
+                string part = string.Empty;
+                string model = string.Empty;
+                int specs = 0;
+                int qty = 0;
+                int unitwgt = 0;
+                int wgt = 0;
+                SqlParameter totalweight = new SqlParameter("@TotalWeight", SqlDbType.VarChar, 30);
+                totalweight.Direction = ParameterDirection.Output;
+                if (dgvParts_Details != null && dgvParts_Details.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in dgvParts_Details.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            List<SqlParameter> spParams = new List<SqlParameter>();
+                            part = row.Cells[0].Value.ToString();
+                            //model = row.Cells[1].Value.ToString();
+                            specs = int.Parse(row.Cells[2].Value.ToString());
+                            qty = int.Parse(row.Cells[3].Value.ToString());
+                            unitwgt = int.Parse(row.Cells[4].Value.ToString());
+                            wgt = int.Parse(row.Cells[5].Value.ToString());                          
+                            spParams.Add(new SqlParameter("@Part", part));
+                            //spParams.Add(new SqlParameter("@Model", model));
+                            spParams.Add(new SqlParameter("@Specs", specs));
+                            spParams.Add(new SqlParameter("@Quantity", qty));
+                            spParams.Add(new SqlParameter("@UnitWeight", unitwgt));
+                            spParams.Add(new SqlParameter("@Weight", wgt));
+                            spParams.Add(totalweight);
+                            DataTable dt = ExecuteStoredProcedure("spUpdateDroneInputs", spParams);
+                        }
+                    }
+                }
+                PopulateDgvPartDetails();
+                lblCalculatedWeight.Text = totalweight.Value.ToString();
+                lblTotalWeight.Visible = true;
+                lblCalculatedWeight.Visible = true;
+                UseWaitCursor = false;
+            }
+            catch (Exception ex)
+            {
+                UseWaitCursor = false;
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
+

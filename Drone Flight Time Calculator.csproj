@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DroneFlightTimeCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DroneFlightTimeCalculator.Designer.cs">
+      <DependentUpon>DroneFlightTimeCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drone_Flight_Time_Calculator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,13 +65,26 @@
     <Compile Include="Drone_Calculations.Designer.cs">
       <DependentUpon>Drone_Calculations.cs</DependentUpon>
     </Compile>
+    <Compile Include="FirstPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstPage.Designer.cs">
+      <DependentUpon>FirstPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DroneFlightTimeCalculator.resx">
+      <DependentUpon>DroneFlightTimeCalculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Drone_Flight_Time_Calculator.resx">
       <DependentUpon>Drone_Flight_Time_Calculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drone_Calculations.resx">
       <DependentUpon>Drone_Calculations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstPage.resx">
+      <DependentUpon>FirstPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
