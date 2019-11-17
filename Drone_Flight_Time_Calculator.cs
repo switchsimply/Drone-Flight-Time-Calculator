@@ -29,6 +29,7 @@ namespace Drone_Flight_Time_Calculator
             this.dgvParts_Details.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
             this.dgvParts_Details.AllowUserToAddRows = true;
             this.dgvParts_Details.Columns[5].ReadOnly = true;
+            dgvParts_Details.CellBorderStyle = DataGridViewCellBorderStyle.None;
             //this.dgvParts_Details.EditMode = DataGridViewEditMode.EditOnKeystroke;
         }
         private void PopulateCmbDroneType()
