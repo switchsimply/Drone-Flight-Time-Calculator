@@ -44,6 +44,7 @@
             // 
             this.pnl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl1.BackgroundImage")));
             this.pnl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl1.Location = new System.Drawing.Point(0, 0);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(563, 220);
@@ -52,6 +53,7 @@
             // pnl2
             // 
             this.pnl2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnl2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl2.Location = new System.Drawing.Point(172, 360);
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(215, 1);
@@ -60,6 +62,7 @@
             // pnl3
             // 
             this.pnl3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnl3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl3.Location = new System.Drawing.Point(172, 459);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(215, 1);
@@ -69,13 +72,15 @@
             // 
             this.txtboxPassword.BackColor = System.Drawing.SystemColors.Control;
             this.txtboxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxPassword.Location = new System.Drawing.Point(179, 438);
             this.txtboxPassword.Name = "txtboxPassword";
-            this.txtboxPassword.Size = new System.Drawing.Size(208, 15);
+            this.txtboxPassword.Size = new System.Drawing.Size(208, 25);
             this.txtboxPassword.TabIndex = 3;
             // 
             // panel1
             // 
+            this.panel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(179, 329);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 1);
@@ -85,28 +90,29 @@
             // 
             this.txtboxUsername.BackColor = System.Drawing.SystemColors.Control;
             this.txtboxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxUsername.Location = new System.Drawing.Point(172, 339);
             this.txtboxUsername.Name = "txtboxUsername";
-            this.txtboxUsername.Size = new System.Drawing.Size(208, 15);
+            this.txtboxUsername.Size = new System.Drawing.Size(208, 25);
             this.txtboxUsername.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(168, 315);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 21);
+            this.label1.Size = new System.Drawing.Size(95, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(172, 414);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
+            this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "Password";
             // 
@@ -115,7 +121,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.SkyBlue;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogin.Location = new System.Drawing.Point(220, 549);
             this.btnLogin.Name = "btnLogin";
