@@ -89,29 +89,28 @@
     <Compile Include="Program\AddNewComponent.Designer.cs">
       <DependentUpon>AddNewComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program\DroneFlightTimeCalculator.cs">
+    <Compile Include="Old Forms\DroneFlightTimeCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Program\DroneFlightTimeCalculator.Designer.cs">
+    <Compile Include="Old Forms\DroneFlightTimeCalculator.Designer.cs">
       <DependentUpon>DroneFlightTimeCalculator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program\Drone_Flight_Time_Calculator.cs">
+    <Compile Include="Old Forms\Drone_Flight_Time_Calculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Program\Drone_Flight_Time_Calculator.Designer.cs">
+    <Compile Include="Old Forms\Drone_Flight_Time_Calculator.Designer.cs">
       <DependentUpon>Drone_Flight_Time_Calculator.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\DroneProperty.cs" />
-    <Compile Include="Program\Drone_Calculations.cs">
+    <Compile Include="Old Forms\Drone_Calculations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Program\Drone_Calculations.Designer.cs">
+    <Compile Include="Old Forms\Drone_Calculations.Designer.cs">
       <DependentUpon>Drone_Calculations.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\FirstPage.cs">
+    <Compile Include="Old Forms\FirstPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\FirstPage.Designer.cs">
+    <Compile Include="Old Forms\FirstPage.Designer.cs">
       <DependentUpon>FirstPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,16 +120,16 @@
     <EmbeddedResource Include="Program\AddNewComponent.resx">
       <DependentUpon>AddNewComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Program\DroneFlightTimeCalculator.resx">
+    <EmbeddedResource Include="Old Forms\DroneFlightTimeCalculator.resx">
       <DependentUpon>DroneFlightTimeCalculator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Program\Drone_Flight_Time_Calculator.resx">
+    <EmbeddedResource Include="Old Forms\Drone_Flight_Time_Calculator.resx">
       <DependentUpon>Drone_Flight_Time_Calculator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Program\Drone_Calculations.resx">
+    <EmbeddedResource Include="Old Forms\Drone_Calculations.resx">
       <DependentUpon>Drone_Calculations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\FirstPage.resx">
+    <EmbeddedResource Include="Old Forms\FirstPage.resx">
       <DependentUpon>FirstPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
