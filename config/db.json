@@ -1,5 +1,0 @@
-{
-    "url": "mongodb://<dbuser>:<dbpassword>@ds053479.mlab.com:53479/dftcalculatordb",
-    "username": "test",
-    "password": "test123"
-}
