@@ -1,4 +1,4 @@
-﻿namespace Drone_Calculations.Main
+﻿namespace DroneFlightTimeCalculator.MainForms
 {
     partial class Main
     {
@@ -28,28 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpBoxMain = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddNewComponent = new System.Windows.Forms.Button();
-            this.grpBoxMain.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grpBoxMain
+            // tableLayoutPanel1
             // 
-            this.grpBoxMain.Controls.Add(this.btnAddNewComponent);
-            this.grpBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpBoxMain.Location = new System.Drawing.Point(0, 0);
-            this.grpBoxMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpBoxMain.Name = "grpBoxMain";
-            this.grpBoxMain.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpBoxMain.Size = new System.Drawing.Size(1022, 648);
-            this.grpBoxMain.TabIndex = 0;
-            this.grpBoxMain.TabStop = false;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAddNewComponent, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(900, 182);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnAddNewComponent
             // 
-            this.btnAddNewComponent.Location = new System.Drawing.Point(69, 318);
+            this.btnAddNewComponent.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddNewComponent.Location = new System.Drawing.Point(212, 24);
             this.btnAddNewComponent.Name = "btnAddNewComponent";
-            this.btnAddNewComponent.Size = new System.Drawing.Size(169, 39);
+            this.btnAddNewComponent.Size = new System.Drawing.Size(235, 42);
             this.btnAddNewComponent.TabIndex = 0;
             this.btnAddNewComponent.Text = "Add New Component";
             this.btnAddNewComponent.UseVisualStyleBackColor = true;
@@ -59,22 +63,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 648);
-            this.Controls.Add(this.grpBoxMain);
+            this.ClientSize = new System.Drawing.Size(900, 591);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DFT Calculator";
-            this.grpBoxMain.ResumeLayout(false);
+            this.Text = "Drone Flight Time Calculator";
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grpBoxMain;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnAddNewComponent;
     }
 }

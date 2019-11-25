@@ -1,4 +1,4 @@
-﻿namespace Drone_Calculations.Program
+﻿namespace DroneFlightTimeCalculator.ProgramFiles
 {
     partial class AddNewComponent
     {
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.tblAddNewComponent = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.txtBoxWeight = new System.Windows.Forms.TextBox();
+            this.txtBoxSpecifications = new System.Windows.Forms.TextBox();
+            this.txtBoxModel = new System.Windows.Forms.TextBox();
             this.lblComponentName = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblSpecifications = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
             this.txtBoxComponentName = new System.Windows.Forms.TextBox();
-            this.txtBoxModel = new System.Windows.Forms.TextBox();
-            this.txtBoxSpecifications = new System.Windows.Forms.TextBox();
-            this.txtBoxWeight = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.tblAddNewComponent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,41 @@
             this.tblAddNewComponent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tblAddNewComponent.Size = new System.Drawing.Size(811, 402);
             this.tblAddNewComponent.TabIndex = 0;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancel.Location = new System.Drawing.Point(493, 347);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(148, 28);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txtBoxWeight
+            // 
+            this.txtBoxWeight.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxWeight.Location = new System.Drawing.Point(327, 267);
+            this.txtBoxWeight.Name = "txtBoxWeight";
+            this.txtBoxWeight.Size = new System.Drawing.Size(286, 26);
+            this.txtBoxWeight.TabIndex = 7;
+            // 
+            // txtBoxSpecifications
+            // 
+            this.txtBoxSpecifications.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxSpecifications.Location = new System.Drawing.Point(327, 187);
+            this.txtBoxSpecifications.Name = "txtBoxSpecifications";
+            this.txtBoxSpecifications.Size = new System.Drawing.Size(286, 26);
+            this.txtBoxSpecifications.TabIndex = 6;
+            // 
+            // txtBoxModel
+            // 
+            this.txtBoxModel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxModel.Location = new System.Drawing.Point(327, 107);
+            this.txtBoxModel.Name = "txtBoxModel";
+            this.txtBoxModel.Size = new System.Drawing.Size(286, 26);
+            this.txtBoxModel.TabIndex = 5;
             // 
             // lblComponentName
             // 
@@ -122,30 +157,6 @@
             this.txtBoxComponentName.Size = new System.Drawing.Size(286, 26);
             this.txtBoxComponentName.TabIndex = 4;
             // 
-            // txtBoxModel
-            // 
-            this.txtBoxModel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxModel.Location = new System.Drawing.Point(327, 107);
-            this.txtBoxModel.Name = "txtBoxModel";
-            this.txtBoxModel.Size = new System.Drawing.Size(286, 26);
-            this.txtBoxModel.TabIndex = 5;
-            // 
-            // txtBoxSpecifications
-            // 
-            this.txtBoxSpecifications.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxSpecifications.Location = new System.Drawing.Point(327, 187);
-            this.txtBoxSpecifications.Name = "txtBoxSpecifications";
-            this.txtBoxSpecifications.Size = new System.Drawing.Size(286, 26);
-            this.txtBoxSpecifications.TabIndex = 6;
-            // 
-            // txtBoxWeight
-            // 
-            this.txtBoxWeight.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxWeight.Location = new System.Drawing.Point(327, 267);
-            this.txtBoxWeight.Name = "txtBoxWeight";
-            this.txtBoxWeight.Size = new System.Drawing.Size(286, 26);
-            this.txtBoxWeight.TabIndex = 7;
-            // 
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -155,16 +166,7 @@
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.Location = new System.Drawing.Point(493, 347);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(148, 28);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddNewComponent
             // 

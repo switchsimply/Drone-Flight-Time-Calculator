@@ -1,4 +1,4 @@
-﻿using Drone_Calculations.Program;
+﻿using DroneFlightTimeCalculator.ProgramFiles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Drone_Calculations.Main
+namespace DroneFlightTimeCalculator.MainForms
 {
     public partial class Main : Form
     {

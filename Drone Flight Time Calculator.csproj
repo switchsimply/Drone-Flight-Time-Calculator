@@ -81,12 +81,13 @@
     <Compile Include="MainForms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MongoCRUD.cs" />
+    <Compile Include="ProgramFiles\Component.cs" />
+    <Compile Include="ProgramFiles\MongoCRUD.cs" />
     <Compile Include="MainForms\Program.cs" />
-    <Compile Include="Program\AddNewComponent.cs">
+    <Compile Include="ProgramFiles\AddNewComponent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Program\AddNewComponent.Designer.cs">
+    <Compile Include="ProgramFiles\AddNewComponent.Designer.cs">
       <DependentUpon>AddNewComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="Old Forms\DroneFlightTimeCalculator.cs">
@@ -117,7 +118,7 @@
     <EmbeddedResource Include="MainForms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Program\AddNewComponent.resx">
+    <EmbeddedResource Include="ProgramFiles\AddNewComponent.resx">
       <DependentUpon>AddNewComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Old Forms\DroneFlightTimeCalculator.resx">
