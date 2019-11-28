@@ -88,6 +88,7 @@
             this.txtBoxWeight.Name = "txtBoxWeight";
             this.txtBoxWeight.Size = new System.Drawing.Size(286, 26);
             this.txtBoxWeight.TabIndex = 7;
+            this.txtBoxWeight.TextChanged += new System.EventHandler(this.txtBoxWeight_TextChanged);
             // 
             // txtBoxSpecifications
             // 
