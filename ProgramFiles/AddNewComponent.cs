@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MongoDB.Driver;
+using DroneFlightTimeCalculator.MainForms;
 
 namespace DroneFlightTimeCalculator.ProgramFiles
 {
@@ -26,26 +27,47 @@ namespace DroneFlightTimeCalculator.ProgramFiles
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            //btnSave.Enabled = false;
+            UseWaitCursor = true;
+            InsertComponentindb();
+            UseWaitCursor = false;
+            //btnSave.Enabled = true;
+            this.Refresh();
+
+        }
+
+        private void txtBoxWeight_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtBoxWeight.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtBoxWeight.Clear();
+            }
+        }
+
+        private void InsertComponentindb()
+        {
             try
             {
+                string connectionstring = string.Format("mongodb://test:test123@ds053479.mlab.com:53479/dftcalculatordb/?retryWrites=false");
+                string databaseName = string.Format("dftcalculatordb");
+                MongoCRUD database = new MongoCRUD(connectionstring, databaseName);
+                string dbcollection = string.Format("componentscollection");
                 var component = new Component
                 {
-                     ComponentName = txtBoxComponentName.Text,
-                     Model = txtBoxModel.Text,
-                     Specifications = txtBoxSpecifications.Text,
-                     Weight = int.Parse(txtBoxWeight.Text)
+                    ComponentName = txtBoxComponentName.Text.ToString(),
+                    Model = txtBoxModel.Text.ToString(),
+                    Specifications = txtBoxSpecifications.Text.ToString(),
+                    Weight = int.Parse(txtBoxWeight.Text)
                 };
-                var client = new MongoClient();
-                var database = client.GetDatabase("dftcalculatordb");
-                var col = database.GetCollection<Component>("componentscollection");
-
-                col.InsertOneAsync(component);
+                MongoCRUD.InsertDocument(dbcollection, component);
+                MessageBox.Show("Details Entered Successfully");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-            
     }
 }
