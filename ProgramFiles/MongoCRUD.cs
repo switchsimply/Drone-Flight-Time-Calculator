@@ -35,7 +35,7 @@ namespace DroneFlightTimeCalculator.MainForms
         /// <typeparam name="T"></typeparam>
         /// <param name="collectionName"></param>
         /// <returns></returns>
-        public List<T> LoadAllDocuments<T>(string collectionName)
+        public static List<T> LoadAllDocuments<T>(string collectionName)
         {
             var collection = db.GetCollection<T>(collectionName);
 

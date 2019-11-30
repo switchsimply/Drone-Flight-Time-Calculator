@@ -23,5 +23,11 @@ namespace DroneFlightTimeCalculator.MainForms
             AddNewComponent f2 = new AddNewComponent();
             f2.ShowDialog();
         }
+
+        private void btnViewComponent_Click(object sender, EventArgs e)
+        {
+            ViewComponents f3 = new ViewComponents();
+            f3.ShowDialog();
+        }
     }
 }
