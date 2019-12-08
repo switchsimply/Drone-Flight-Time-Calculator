@@ -11,10 +11,12 @@ namespace DroneFlightTimeCalculator.MainForms
     public class MongoCRUD
     {
         private static IMongoDatabase db= null;
-        public MongoCRUD(string connectionstring, string database)
+        public MongoCRUD()
         {
+            string connectionstring = string.Format("mongodb://test:test123@ds053479.mlab.com:53479/dftcalculatordb/?retryWrites=false");
+            string databaseName = string.Format("dftcalculatordb");
             var client = new MongoClient(connectionstring);
-            db = client.GetDatabase(database);
+            db = client.GetDatabase(databaseName);
         }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace DroneFlightTimeCalculator.MainForms
         /// <param name="document">Document</param>
         public static void InsertDocument<T>(string collectionName, T document)
         {
+            MongoCRUD mongoCRUD = new MongoCRUD();
             var collection = db.GetCollection<T>(collectionName);
             collection.InsertOne(document);
         }
@@ -37,8 +40,8 @@ namespace DroneFlightTimeCalculator.MainForms
         /// <returns></returns>
         public static List<T> LoadAllDocuments<T>(string collectionName)
         {
+            MongoCRUD mongoCRUD = new MongoCRUD();
             var collection = db.GetCollection<T>(collectionName);
-
             return collection.Find(new BsonDocument()).ToList();
         }
 

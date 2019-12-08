@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tblAddNewComponent = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDone = new System.Windows.Forms.Button();
             this.txtBoxWeight = new System.Windows.Forms.TextBox();
             this.txtBoxSpecifications = new System.Windows.Forms.TextBox();
             this.txtBoxModel = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.tblAddNewComponent.ColumnCount = 2;
             this.tblAddNewComponent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tblAddNewComponent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tblAddNewComponent.Controls.Add(this.btnCancel, 1, 4);
+            this.tblAddNewComponent.Controls.Add(this.btnDone, 1, 4);
             this.tblAddNewComponent.Controls.Add(this.txtBoxWeight, 1, 3);
             this.tblAddNewComponent.Controls.Add(this.txtBoxSpecifications, 1, 2);
             this.tblAddNewComponent.Controls.Add(this.txtBoxModel, 1, 1);
@@ -70,16 +70,16 @@
             this.tblAddNewComponent.Size = new System.Drawing.Size(811, 402);
             this.tblAddNewComponent.TabIndex = 0;
             // 
-            // btnCancel
+            // btnDone
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.Location = new System.Drawing.Point(493, 347);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(148, 28);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnDone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDone.Location = new System.Drawing.Point(493, 347);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(148, 28);
+            this.btnDone.TabIndex = 9;
+            this.btnDone.Text = "Done";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtBoxWeight
             // 
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Label lblSpecifications;
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.TextBox txtBoxComponentName;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnSave;
     }
 }

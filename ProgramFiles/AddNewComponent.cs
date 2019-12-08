@@ -15,8 +15,7 @@ namespace DroneFlightTimeCalculator.ProgramFiles
 {
     public partial class AddNewComponent : Form
     {
-        string connectionstring = string.Format("mongodb://test:test123@ds053479.mlab.com:53479/dftcalculatordb/?retryWrites=false");
-        string databaseName = string.Format("dftcalculatordb");
+        string dbcollection = string.Format("componentscollection");
         public AddNewComponent()
         {
             InitializeComponent();
@@ -25,18 +24,16 @@ namespace DroneFlightTimeCalculator.ProgramFiles
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Components Added Successfully");
+            Cursor.Current = Cursors.WaitCursor;
             this.Close();
+            Cursor.Current = Cursors.Default;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-            //btnSave.Enabled = false;
-            UseWaitCursor = true;
+            Cursor.Current = Cursors.WaitCursor;
             InsertComponentindb();
-            UseWaitCursor = false;
-            //btnSave.Enabled = true;
+            Cursor.Current = Cursors.Default;
             this.txtBoxComponentName.Clear();
             this.txtBoxModel.Clear();
             this.txtBoxSpecifications.Clear();
@@ -57,8 +54,6 @@ namespace DroneFlightTimeCalculator.ProgramFiles
         {
             try
             { 
-                MongoCRUD database = new MongoCRUD(connectionstring, databaseName);
-                string dbcollection = string.Format("componentscollection");
                 var component = new Component
                 {
                     ComponentName = txtBoxComponentName.Text.ToString(),
@@ -66,9 +61,7 @@ namespace DroneFlightTimeCalculator.ProgramFiles
                     Specifications = txtBoxSpecifications.Text.ToString(),
                     Weight = int.Parse(txtBoxWeight.Text)
                 };
-                MongoCRUD.InsertDocument(dbcollection, component);
-                
-
+                MongoCRUD.InsertDocument(dbcollection, component);              
                 MessageBox.Show("Details Entered Successfully");
             }
             catch (Exception ex)
@@ -80,38 +73,31 @@ namespace DroneFlightTimeCalculator.ProgramFiles
         List<TextBox> txtBoxListName = new List<TextBox>();
         private void FillTextBox()
         {
-            MongoCRUD database = new MongoCRUD(connectionstring, databaseName);
-            string dbcollection = string.Format("componentscollection");
             List<Component> data = MongoCRUD.LoadAllDocuments<Component>(dbcollection);
-            txtBoxListName = new List<TextBox> { txtBoxComponentName, txtBoxModel, txtBoxSpecifications, txtBoxWeight }; 
-            AutoCompleteTextBox(txtBoxListName, data);
+            txtBoxListName = new List<TextBox> { txtBoxComponentName, txtBoxModel, txtBoxSpecifications, txtBoxWeight };
+            foreach (TextBox tb in txtBoxListName)
+            {
+                AutoCompleteTextBox(tb, data);
+            }
         }
-
-        
-
-        private void AutoCompleteTextBox(List <TextBox> txtBoxList,List<Component> listdata)
+     
+        public void AutoCompleteTextBox(TextBox txtBox,List<Component> listdata)
         {
             AutoCompleteStringCollection sourceName = new AutoCompleteStringCollection();
-            MongoCRUD database = new MongoCRUD(connectionstring, databaseName);
-            string dbcollection = string.Format("componentscollection");
-            foreach(var txtBox in txtBoxList)
+            foreach (var component in listdata)
             {
-                foreach (var component in listdata)
-                {
-                    if(txtBox == txtBoxComponentName)
-                        sourceName.Add(component.ComponentName.ToString());
-                    else if (txtBox == txtBoxModel)
-                        sourceName.Add(component.Model.ToString());
-                    else if (txtBox == txtBoxSpecifications)
-                        sourceName.Add(component.Specifications.ToString());
-                    else if (txtBox == txtBoxModel)
-                        sourceName.Add(component.Weight.ToString());
-                }
-                txtBox.AutoCompleteCustomSource = sourceName;
-                txtBox.AutoCompleteMode = AutoCompleteMode.Suggest;
-                txtBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                if(txtBox == txtBoxComponentName)
+                    sourceName.Add(component.ComponentName.ToString());
+                else if (txtBox == txtBoxModel)
+                    sourceName.Add(component.Model.ToString());
+                else if (txtBox == txtBoxSpecifications)
+                    sourceName.Add(component.Specifications.ToString());
+                else if (txtBox == txtBoxWeight)
+                    sourceName.Add(component.Weight.ToString());
             }
-            
+            txtBox.AutoCompleteCustomSource = sourceName;
+            txtBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
     }
 }

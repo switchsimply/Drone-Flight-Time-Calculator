@@ -87,8 +87,8 @@ namespace Drone_Calculations
             tblPart_Details.Dock = DockStyle.Right;
             tblPart_Details.AutoScroll = true;
             tblPart_Details.AutoSize = true;
-            //tblPart_Details.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            //tblPart_Details.BackColor = Color.Wheat;
+            tblPart_Details.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tblPart_Details.BackColor = Color.Wheat;
             tblPart_Details.TabIndex = 1;
             tblPart_Details.ColumnCount = 5;
             tblPart_Details.RowCount = 2;
